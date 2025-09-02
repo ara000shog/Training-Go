@@ -1,0 +1,125 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>План для новичков</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="plans.html">Планы тренировок</a>
+        <a href="exercises.html">Упражнения</a>
+        <a href="nutrition.html">Питание</a>
+    </nav>
+</header>
+<div class="container">
+    <h1>Спина</h1>
+    <div class="content">
+    </div>
+
+    <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back1.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-machine-pulldown-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back2.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-machine-seated-cable-row-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+        
+    <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back3.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-machine-back-extensions-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back4.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-plate-loaded-row-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back5.png" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-assisted-pull-up-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/back6.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-neutral-row-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+
+
+
+
+
+
+
+    <script>
+    function playVideo(card) {
+      const img = card.querySelector('img');
+      const btn = card.querySelector('.play-btn');
+      const iframe = card.querySelector('iframe');
+      const video = card.querySelector('video');
+      img.classList.add('hidden');
+      btn.classList.add('hidden');
+      if (iframe) {
+        iframe.classList.add('show');
+      } else if (video) {
+        video.classList.add('show');
+        video.play();
+      }
+      card.onclick = null;
+    }
+  </script>
+</div>
+</body>
+</html>

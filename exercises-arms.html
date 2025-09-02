@@ -1,0 +1,182 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>План для новичков</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="plans.html">Планы тренировок</a>
+        <a href="exercises.html">Упражнения</a>
+        <a href="nutrition.html">Питание</a>
+    </nav>
+</header>
+<div class="container">
+    <h1>Руки</h1>
+    <div class="content">
+    </div>
+
+    <div class="video-card" onclick="playVideo(this)">
+    <img src="img/biceps1.jpeg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-bicep-curl-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/biceps2.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-hammer-curl-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/triceps1.png" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-cable-push-downs-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/triceps2.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-dips-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/stom1.png" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Cables-cable-kneeling-crunch-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/pkechi1.png" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-front-military-press-side.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/plechi2.png" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Cables-cable-lateral-raise-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/plechi3.jpeg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Cables-cable-upright-row-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-card" onclick="playVideo(this)">
+    <img src="img/plechi4.jpg" alt="Превью" />
+    <button class="play-btn" aria-label="Смотреть видео"></button>
+
+    <!-- Вариант 1: YouTube -->
+    <iframe
+      src="https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-internally-rotated-rear-delt-fly-front.mp4"
+      title="Видео"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    function playVideo(card) {
+      const img = card.querySelector('img');
+      const btn = card.querySelector('.play-btn');
+      const iframe = card.querySelector('iframe');
+      const video = card.querySelector('video');
+      img.classList.add('hidden');
+      btn.classList.add('hidden');
+      if (iframe) {
+        iframe.classList.add('show');
+      } else if (video) {
+        video.classList.add('show');
+        video.play();
+      }
+      card.onclick = null;
+    }
+  </script>
+</div>
+</body>
+</html>
